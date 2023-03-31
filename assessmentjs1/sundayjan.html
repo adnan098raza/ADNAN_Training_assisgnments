@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <title>rotating string</title>
+    </head>
+    <body> 
+        <script>
+        // Initialize variables to hold the starting and ending years
+        const startYear = 2014;
+        const endYear = 2050; // Loop through each year within the range and check if 1st January is a Sunday
+        for(let year = startYear; year <= endYear; year++) 
+        {
+            	const date = new Date(year, 0, 1); // Create a new date object for 1st January of the current year
+                 	if(date.getDay() === 0) 
+                    { // Check if the day of the week is Sunday (0 represents Sunday)
+                        console.log(`1st January ${year} is a Sunday`); // Print the year if 1st January is a Sunday
+                    }
+        }
+        </script>
+    </body>
+</html>
+

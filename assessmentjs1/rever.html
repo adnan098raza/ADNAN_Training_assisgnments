@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>rotating string</title>
+    </head>
+    <body> 
+        <script>
+        let str = 'Koding && Learning';
+        let rotations = 0;
+        let lastLetter = 0;
+
+        while (rotations < 15) 
+        {
+        lastLetter = str.charAt(str.length - 1); 
+        str = str.slice(0, str.length - 1);
+        str = lastLetter + str;
+        console.log(str);
+        rotations++;
+         } 
+        </script>
+    </body>
+</html>

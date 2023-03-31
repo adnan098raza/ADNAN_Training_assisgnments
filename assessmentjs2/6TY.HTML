@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Page</title>
+    <style>
+      body {
+        background-color: #7f3dea;
+      }
+      .gray-background {
+        background-color: #54d9e5;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="my-paragraph">hello</p>
+    <button id="my-button">Click me</button>
+    <button id="my-other-button">Click me too</button>
+
+    <script>
+      
+      const myButton = document.getElementById("my-button");
+      const myOtherButton = document.getElementById("my-other-button");
+      const myParagraph = document.getElementById("my-paragraph");
+
+      
+      myButton.addEventListener("click", function() {
+       
+        myParagraph.textContent = "The first button was clicked!MESSI recievs the ankara messi ankara messi ankara messi";
+      });
+
+      myOtherButton.addEventListener("click", function() {
+        
+        myParagraph.textContent = "The second button was clicked! messi messi messi goal goal goal goal goal";
+      });
+
+      
+      const myNewButton = document.createElement("button");
+      myNewButton.textContent = "Click me three";
+      document.body.appendChild(myNewButton);
+
+      myNewButton.addEventListener("click", function() {
+       
+        document.body.classList.toggle("gray-background");
+      });
+    </script>
+  </body>
+</html>

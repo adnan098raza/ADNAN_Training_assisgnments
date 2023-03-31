@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <title>rotating string</title>
+    </head>
+    <body> 
+        <h1>DAYS LEFT FOR CHRISTMAS </h1>
+        <script>
+            // Get the current date and year
+            const today = new Date();
+            const currentYear = today.getFullYear();
+            const nextChristmas = new Date(currentYear, 11, 25);//11TH IS DEC "INDEX VAL"
+            if (today > nextChristmas) 
+            {
+                    nextChristmas.setFullYear(currentYear + 1);
+            }
+            const diffTime = nextChristmas.getTime() - today.getTime();
+            const daysLeft = Math.ceil(diffTime / (1000 * 3600 * 24));
+            console.log(`There are ${daysLeft} days left until Christmas!`)
+        </script>
+    </body>
+</html>
