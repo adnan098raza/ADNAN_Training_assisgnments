@@ -1,0 +1,4 @@
+What is the capital of France?,A) London,B) Paris,C) Berlin,D) Madrid,B
+What is the largest continent by land area?,A) North America,B) Asia,C) Africa,D) Europe,B
+What is the symbol for sodium?,A) Fe,B) Na,C) Cu,D) Mg,B
+What is the number of Messi in fifa ?,A) 30,B) 21,C) 07,D) 10,D
