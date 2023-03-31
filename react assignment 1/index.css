@@ -1,0 +1,202 @@
+
+.ab
+{     font-family: cursive;
+      background-color: #a2fafa;
+      color: rgb(0, 0, 0);
+       font-size: 14px;
+       margin-top: 3px;
+       padding: 5px 5px;
+        border: 1px solid black;
+        border-radius: 1px;
+        cursor: pointer;
+       box-shadow: 2px 2px 2px;
+} 
+.bc
+{     
+   font-family: cursive;
+      background-color: #a2fafa;
+      color: rgb(0, 0, 0);
+       font-size: 14px;
+       padding: 5px 5px;
+        border: 1px solid black;
+        border-radius: 1px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 5px;
+        box-shadow: 2px 2px 2px;
+      
+} 
+form {
+   max-width: 200px;
+   padding: 20px;
+   background-color: rgb(136, 243, 218);
+   border-radius: 5px;
+   border-radius: 11px;
+   box-shadow: 2px 2px 2px;
+ }
+ body{
+  /* background-image: url(C:\Users\Razaadn\Downloads\messi1.gif); */
+   background-color: rgb(231, 150, 110);
+   background-size: cover;
+   
+ }
+ .he
+ {
+   margin-left: 30px;
+ }
+ .helo
+ {
+   text-align: center;
+   color: white;
+ }
+h1{
+  text-align: center;
+   color: white;
+}
+.hr
+{     font-family: cursive;
+      background-color: #d75797;
+      color: rgb(0, 0, 0);
+       font-size: 16px;
+       padding: 10px 20px;
+        border: 1px solid black;
+        border-radius: 1px;
+        cursor: pointer;
+       box-shadow: 2px 2px 2px;
+} 
+.he
+{     font-family: cursive;
+      background-color: #d75797;
+      color: rgb(0, 0, 0);
+       font-size: 16px;
+       padding: 10px 20px;
+        border: 1px solid black;
+        border-radius: 1px;
+        cursor: pointer;
+       box-shadow: 2px 2px 2px;
+} 
+h2{
+  color: white;
+}
+.cld
+{ 
+  color: rgb(255, 255, 255);
+}
+.tmp
+{ 
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+/*
+.app {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 50vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+}
+  
+input[type="text"],
+input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+  background: #6cf0c2;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}*/
+
+.App {
+  padding: 30px;
+}
+
+.input {
+  padding: 7px 8px;
+  width: 300px;
+  font-size: 16px;
+  font-family: caption; 
+}
+
+.checkbox-container {
+  margin: 20px 0;
+}
+.cntr{
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
