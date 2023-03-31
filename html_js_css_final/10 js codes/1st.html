@@ -1,0 +1,54 @@
+//1.	Write a JavaScript function to find the intersection of two arrays.
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-image: url(https://www.freecodecamp.org/news/content/images/2021/06/w-qjCHPZbeXCQ-unsplash.jpg);
+    }
+      form {
+        max-width: 200px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.546);
+        border-radius: 5px;
+        border-radius: 11px;
+        box-shadow: 2px 2px 2px;
+      }
+  </style>
+  <title>1.Arrays Intersection</title>
+  <script>
+    function findIntersection() {
+      const array1 = document.getElementById('array1').value.split(',').map(value => value.trim());
+      const array2 = document.getElementById('array2').value.split(',').map(value => value.trim());
+
+      const intersection = array1.filter(value => array2.includes(value));
+
+      if (intersection.length > 0) {
+        document.getElementById('result').textContent = `The intersection of [${array1}] and [${array2}] is [${intersection}].`;
+      } else {
+        document.getElementById('result').textContent = `There is no intersection between [${array1}] and [${array2}].`;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+  <h1>Intersection of Two Arrays</h1>
+  
+  <form>
+    <p>USE ","</p>
+    <label for="array1">Enter the first array:</label>
+    <input type="text" id="array1" name="array1" required><br></br>
+
+    <label for="array2">Enter the second array:</label>
+    <input type="text" id="array2" name="array2" required><br></br>
+
+    <button type="button" onclick="findIntersection()">Find Intersection</button>
+  </form>
+</center>
+  <p id="result"></p>
+</body>
+
+</html>

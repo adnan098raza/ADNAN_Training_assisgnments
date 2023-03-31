@@ -1,0 +1,38 @@
+//Write a html Script program to find the missing number in an array of integers.
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find Missing Number in Array</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+		}
+		h1 {
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<h1>Find Missing Number in Array</h1>
+	<p>
+		<label for="array">Enter the array:</label>
+		<input type="text" id="array" name="array" value="1, 2, 3, 5, 6, 7, 8, 9" />
+	</p>
+	<button onclick="findMissingNumber()">Find Missing Number</button>
+	<p id="result"></p>
+	<script>
+		function findMissingNumber() {
+			const arr = document.getElementById("array").value.split(",").map(Number);
+			let sum = 0;
+			for (let i = 0; i < arr.length; i++) {
+				sum += arr[i];
+			}
+			const n = arr.length + 1;
+			const expectedSum = n * (n + 1) / 2;
+			const missingNumber = expectedSum - sum;
+			document.getElementById("result").innerHTML = "The missing number in the array is " + missingNumber + ".";
+		}
+	</script>
+</body>
+</html>

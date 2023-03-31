@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Education Platform</title>
+  <style>
+    /* Reset styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+}
+
+.header-buttons {
+  display: flex;
+}
+
+.login-button,
+.signup-button {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url("hero.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.explore-courses-button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Courses section styles */
+.courses {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.courses h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.course {
+  background-color: #f5f5f5;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+.course img {
+  width: 100%;
+}
+
+.course-details {
+  padding: 20px;
+}
+
+.course-details h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.course-details p {
+  margin-bottom: 10px;
+}
+
+.enroll-button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+  </style>
+  <script>
+    // Get the login and signup buttons from the DOM
+const loginButton = document.querySelector(".login-button");
+const signupButton = document.querySelector(".signup-button");
+
+// Add event listeners to the buttons
+loginButton.addEventListener("click", function() {
+  alert("You clicked the login button!");
+});
+
+signupButton.addEventListener("click", function() {
+  alert("You clicked the signup button!");
+});
+
+// Get the explore courses button from the DOM
+const exploreCoursesButton = document.querySelector(".explore-courses-button");
+
+// Add event listener to the button
+exploreCoursesButton.addEventListener("click", function() {
+  alert("You clicked the explore courses button!");
+});
+
+// Get all the enroll buttons from the DOM
+const enrollButtons = document.querySelectorAll(".enroll-button");
+
+// Add event listener to each button
+enrollButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    alert("You enrolled in a course!");
+  });
+});
+
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Teachers</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-buttons">
+      <button class="login-button">Log In</button>
+      <button class="signup-button">Sign Up</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Learn from the best</h1>
+      <p>Our online education platform offers high-quality courses taught by top teachers around the world.</p>
+      <button class="explore-courses-button">Explore Courses</button>
+    </section>
+    <section class="courses">
+      <h2>Popular Courses</h2>
+      <div class="course">
+        <img src="course1.jpg" alt="Course 1">
+        <div class="course-details">
+          <h3>Introduction to Python</h3>
+          <p>Learn the fundamentals of Python programming language.</p>
+          <button class="enroll-button">Enroll Now</button>
+        </div>
+      </div>
+      <div class="course">
+        <img src="course2.jpg" alt="Course 2">
+        <div class="course-details">
+          <h3>Data Science Essentials</h3>
+          <p>Learn the essential skills for data science and machine learning.</p>
+          <button class="enroll-button">Enroll Now</button>
+        </div>
+      </div>
+      <div class="course">
+        <img src="course3.jpg" alt="Course 3">
+        <div class="course-details">
+          <h3>Web Development Bootcamp</h3>
+          <p>Learn how to build dynamic websites and web applications using the latest web technologies.</p>
+          <button class="enroll-button">Enroll Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Online Education Platform</p>
+  </footer>
+</body>
+</html>

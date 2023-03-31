@@ -1,0 +1,42 @@
+//3.	Write a JavaScript program to find the sum of all numbers in an array.
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sum of Array Elements</title>
+	<style>
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #a46b6b;
+      background-image: url(https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg);
+      background-size: cover;
+		}
+		h1 {
+			color: #333;
+		}
+		#result {
+			padding: 10px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			color: #333;
+			font-size: 18px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Sum of Array Elements</h1>
+	<p id="result"></p>
+	<script>
+		var arr = [5, 10, 15, 20];
+		var sum = 0;
+		var str = "";
+		for (var i = 0; i < arr.length; i++) {
+			sum += arr[i];
+			str += arr[i] + ", ";
+		}
+		str = str.slice(0, -2); // remove the last comma and space
+		document.getElementById("result").innerHTML = "The sum of the array elements (" + str + ") is " + sum;
+	</script>
+</body>
+</html>

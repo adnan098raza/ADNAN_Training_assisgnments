@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My E-commerce Website</title>
+    <style>
+        body {
+            background-color: bisque;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cart a {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.product {
+  width: 300px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.product h3 {
+  margin: 10px;
+}
+
+.product p {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.product button {
+  margin: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+        </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+            <h1>JDM CARS and PARTS</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart">
+        <a href="#">My Cart (0)</a>
+      </div>
+    </header>
+    <main>
+      <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product">
+          <img src="product1.jpg" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>$19.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="product2.jpg" alt="Product 2">
+          <h3>Product 2</h3>
+          <p>$24.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="product3.jpg" alt="Product 3">
+          <h3>Product 3</h3>
+          <p>$29.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </section>
+      <section class="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div class="product">
+          <img src="product4.jpg" alt="Product 4">
+          <h3>Product 4</h3>
+          <p>$34.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="product5.jpg" alt="Product 5">
+          <h3>Product 5</h3>
+          <p>$39.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="product6.jpg" alt="Product 6">
+          <h3>Product 6</h3>
+          <p>$44.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 My E-commerce Website</p>
+    </footer>
+    <script>
+        // Get the cart button element
+const cartButton = document.querySelector('.cart-button');
+
+// Get the cart modal element
+const cartModal = document.querySelector('.cart-modal');
+
+// Get the close button element in the cart modal
+const closeButton = document.querySelector('.close-button');
+
+// When the cart button is clicked, show the cart modal
+cartButton.addEventListener('click', () => {
+  cartModal.style.display = 'block';
+});
+
+// When the close button is clicked, hide the cart modal
+closeButton.addEventListener('click', () => {
+  cartModal.style.display = 'none';
+});
+
+// Get all the add to cart buttons
+const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+
+// Loop through all the add to cart buttons and add a click event listener
+addToCartButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Get the product details from the button's data attributes
+    const productId = button.getAttribute('data-product-id');
+    const productName = button.getAttribute('data-product-name');
+    const productPrice = button.getAttribute('data-product-price');
+
+    // Add the product to the cart
+    addToCart(productId, productName, productPrice);
+  });
+});
+
+// Function to add a product to the cart
+function addToCart(id, name, price) {
+  // Get the cart item list element
+  const cartItemList = document.querySelector('.cart-item-list');
+
+  // Check if the product is already in the cart
+  const existingCartItem = document.querySelector(`.cart-item[data-product-id="${id}"]`);
+  if (existingCartItem) {
+    // If the product is already in the cart, increase the quantity by 1
+    const quantityElement = existingCartItem.querySelector('.cart-item-quantity');
+    let quantity = parseInt(quantityElement.textContent);
+    quantity++;
+    quantityElement.textContent = quantity;
+  } else {
+    // If the product is not in the cart, add it as a new cart item
+    const cartItem = document.createElement('li');
+    cartItem.classList.add('cart-item');
+    cartItem.setAttribute('data-product-id', id);
+    cartItem.innerHTML = `
+      <span class="cart-item-name">${name}</span>
+      <span class="cart-item-price">${price}</span>
+      <span class="cart-item-quantity">1</span>
+      <button class="cart-item-remove-button">Remove</button>
+    `;
+    cartItemList.appendChild(cartItem);
+
+    // Add a click event listener to the remove button
+    const removeButton = cartItem.querySelector('.cart-item-remove-button');
+    removeButton.addEventListener('click', () => {
+      cartItemList.removeChild(cartItem);
+    });
+  }
+}
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse Words in a String</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+		}
+		h1 {
+			color: #333;
+		}
+    form {
+        max-width: 500px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.546);
+        border-radius: 5px;
+        border-radius: 11px;
+        box-shadow: 2px 2px 2px;
+      }
+	</style>
+</head>
+<body>
+  <form>	<h1>Reverse Words in a String</h1>
+	<p>
+		<label for="string">Enter the string:</label>
+		<input type="text" id="string" name="string" value="Hello World" />
+	</p>
+	<button onclick="reverseWords()">Reverse Words</button>
+	<p id="result"></p>
+</form>
+
+	<script>
+		function reverseWords() {
+			const str = document.getElementById("string").value;
+			const words = str.split(" ");
+			const reversedWords = words.reverse();
+			const reversedString = reversedWords.join(" ");
+			document.getElementById("result").innerHTML = "The reversed string is " + reversedString + ".";
+		}
+	</script>
+</body>
+</html>

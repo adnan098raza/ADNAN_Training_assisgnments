@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your Name - Portfolio</title>
+	<style>
+        * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: rgb(64, 165, 181);
+	color: #333;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+form {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      }
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul li {
+	list-style: none;
+	margin-right: 2rem;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s ease;
+}
+main {
+	margin-top: 6rem;
+}
+
+section {
+	padding: 3rem 1.5rem;
+}
+
+section h2 {
+	margin-bottom: 1.5rem;
+}
+
+.project {
+	background-color: #fff;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+
+.project img {
+	max-width: 100%;
+}
+
+.project h3 {
+	margin-bottom: 1rem;
+}
+
+.project p {
+	margin-bottom: 2rem;
+}
+
+ul {
+	margin-left: 2rem;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+input,
+textarea {
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+	font-size: 1rem;
+}
+    </style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#resume">Resume</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="home">
+            <center>
+			<h1>Welcome to my portfolio website</h1>
+			<p>Here, you can find information about my skills, projects, and experience.</p>
+			<button><a href="#about">Learn more</a></button>
+        </center>
+		</section>
+		<section id="about">
+            <form>
+        <center>
+			<h2>About Me</h2>
+			<p>To work in a professional work driven environment that motivates me to utilize my potential efficaciously with ample opportunities for the up-gradation and growth of the company and myself.</p>
+                <img src="pp.jpg" alt="Profile Picture" width="150" height="200">
+            </center>
+        </form>
+        </section>
+		<section id="projects">
+        <center>
+			<h2>Projects</h2>
+			<div class="project">
+				<img src="sd.jpg" alt="Project Title">
+				<h3>Project Title</h3>
+				<p>Project Description</p>
+			</div>
+        </center>    
+		</section>
+		<section id="skills">
+            <form>
+        <center>
+			<h2>Skills</h2>
+                <p>
+                    C++
+                    <BR>
+                    JAVA
+                    <BR>
+                    C
+                    <BR>
+                    COMMUNICATION
+                    <br>
+                </p>
+			</ul>
+        </center>    
+    </form>
+		</section>
+        <center>
+            <form>
+		<section id="resume">
+			<h2>Resume</h2>
+			<a href="Adnan Raza .pdf" target="_blank">Download my Resume</a>
+		</form>
+        </section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<form>
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" required>
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required>
+				<label for="message">Message</label>
+				<textarea id="message" name="message" required></textarea>
+				<button type="submit">Send Message</button>
+			</form>
+		</section>
+    </center>
+	</main>
+	<footer>
+		<p>&copy; 2023 Your Name. All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

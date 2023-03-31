@@ -1,0 +1,63 @@
+//Write a JavaScript program to implement a merge sort algorithm.
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		form {
+        max-width: 500px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.546);
+        border-radius: 5px;
+        border-radius: 11px;
+        box-shadow: 2px 2px 2px;
+      }
+	</style>
+	<title>Merge Sort</title>
+	<script type="text/javascript">
+		function merge(left, right) {
+			var result = [];
+			while (left.length && right.length) {
+				if (left[0] <= right[0]) {
+					result.push(left.shift());
+				} else {
+					result.push(right.shift());
+				}
+			}
+			while (left.length) {
+				result.push(left.shift());
+			}
+			while (right.length) {
+				result.push(right.shift());
+			}
+			return result;
+		}
+
+		function mergeSort(arr) {
+			if (arr.length === 1) {
+				return arr;
+			}
+			var mid = Math.floor(arr.length / 2);
+			var left = arr.slice(0, mid);
+			var right = arr.slice(mid);
+			return merge(mergeSort(left), mergeSort(right));
+		}
+
+		function sortArray() {
+			var numbers = document.getElementById("numbers").value;
+			var arr = numbers.split(",").map(Number);
+			var sortedArr = mergeSort(arr);
+			document.getElementById("result").innerHTML = "The sorted array is [" + sortedArr.join(", ") + "]";
+		}
+	</script>
+</head>
+<body>
+	<form>
+	<h1>Merge Sort</h1>
+	<p>Enter a list of numbers:</p>
+	<p>USE ","</p>
+	<input type="text" id="numbers">
+	<button onclick="sortArray()">Sort Array</button>
+	<p id="result"></p>
+</form>
+</body>
+</html>

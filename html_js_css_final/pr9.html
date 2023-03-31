@@ -1,0 +1,129 @@
+<html> 
+  <head> 
+      <script>
+        var mins = 1; 
+var secs = mins * 60; 
+function countdown() { 
+    setTimeout('Decrement()', 60); 
+}
+function Decrement() { 
+        minutes = document.getElementById("min"); 
+        seconds = document.getElementById("sec");
+
+        if (seconds < 59) { 
+        seconds.value = secs; 
+} 
+else { 
+        minutes.value = getMinutes(); 
+        seconds.value = getSeconds(); 
+}
+        if (secs < 10) { 
+            minutes.style.color = "red"; 
+            seconds.style.color = "red";
+            document.getElementById("msg").innerHTML = "HURRY UP!!"; 
+} 
+        if (mins < 0) { 
+            alert('Timeout'); 
+            minutes.value = '00'; 
+            seconds.value = '00';
+            document.getElementById("timeBox").innerHTML = "<b>Time's up.</b>";
+}
+        else { 
+            secs--; 
+            setTimeout('Decrement()', 1000); 
+        } 
+}
+function getMinutes() { 
+    mins = Math.floor(secs / 60); 
+    return mins; 
+} 
+function getSeconds() { 
+    return secs - Math.round(mins * 60); 
+}var mins = 1; 
+var secs = mins * 60; 
+function countdown() { 
+    setTimeout('Decrement()', 60); 
+} 
+function Decrement() { 
+        minutes = document.getElementById("min"); 
+        seconds = document.getElementById("sec");
+
+        if (seconds < 59) { 
+            seconds.value = secs; 
+        } 
+        else { 
+            minutes.value = getMinutes(); 
+            seconds.value = getSeconds(); 
+        }
+        if (secs < 10) { 
+            minutes.style.color = "red"; 
+            seconds.style.color = "red";
+            document.getElementById("msg").innerHTML = "HURRY UP!!"; 
+        } 
+        if (mins < 0) { 
+            alert('Timeout'); 
+            minutes.value = '00'; 
+            seconds.value = '00';
+            document.getElementById("msg").innerHTML = "Time's up.";
+        }
+        else { 
+            secs--; 
+            setTimeout('Decrement()', 1000); 
+        } 
+}
+function getMinutes() { 
+    mins = Math.floor(secs / 60); 
+    return mins; 
+} 
+function getSeconds() { 
+    return secs - Math.round(mins * 60); 
+}
+      </script> 
+      <style>
+        #clock {
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    border: 5px solid blue;
+    width: 35%;
+    line-height: 50px;
+    font-size: larger;
+    background-color: white;
+}
+.container {
+    background: #222;
+    width: 100%;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 45px; 
+    border: none;
+    font-size: 40px; 
+    font-weight: bold;
+    color: black;
+}
+img{
+    width: 90%;
+}
+body{
+    background-color: #333;
+}
+      </style>
+  </head> 
+  <body > 
+      <div id="clock"> 
+        <h2>Click the image to start the timer (60 seconds)</h2>
+        <img src="rlx.jpg" onclick="countdown();">
+        <div id="timeBox"> 
+          <h3>Time Left</h3>
+            <input id="min" type="text"><font size="10">:</font> 
+            <input id="sec" type="text"> 
+            <p id="msg"></p>
+      </div>
+
+      </div> 
+  </body>
+</html>
