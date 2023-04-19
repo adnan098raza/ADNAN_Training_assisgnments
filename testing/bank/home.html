@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bank Website</title>
+    <style>
+        /* Global Styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2 {
+	font-weight: bold;
+	text-align: center;
+	margin: 2rem 0;
+}
+
+p {
+	line-height: 1.5;
+	margin: 1rem 0;
+}
+
+ul {
+	list-style: none;
+	margin: 1rem 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #0070c0;
+}
+
+img {
+	max-width: 100%;
+}
+
+button {
+	background-color: #0070c0;
+	color: #fff;
+	padding: 1rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #005da4;
+}
+
+.cta {
+	display: block;
+	text-align: center;
+	margin: 2rem auto;
+	max-width: 300px;
+}
+
+/* Header */
+header {
+	background-color: rgb(248, 235, 210);
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav li {
+	margin: 0 1rem;
+}
+
+nav a:hover {
+	color: #005da4;
+}
+
+/* Home Section */
+#home {
+	background-color: #0070c0;
+	color: #fff;
+	padding: 5rem 0;
+	text-align: center;
+}
+
+#home h1 {
+	font-size: 3rem;
+}
+
+/* About Section */
+#about {
+	background-color: #f5f5f5;
+	padding: 5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#about img {
+	margin: 2rem 0;
+	max-width: 100%;
+}
+
+/* Services Section */
+#services {
+	background-color: #fff;
+	padding: 5rem 0;
+	text-align: center;
+}
+
+#services li {
+	font-size: 1.5rem;
+	margin: 1rem 0;
+}
+
+/* Contact Section */
+#contact {
+    background-image: url(d3.gif);
+	background-color: #f5f5f5;
+	padding: 5rem 0;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	margin: 1rem 0;
+}
+
+input, textarea {
+	padding: 0.5rem;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, textarea:focus {
+	outline: none;
+	box-shadow: 0 0 4px rgba(0, 112, 192, 0.4);
+}
+.f2{
+        width: 5%;
+        height: auto;
+}
+form {
+	margin:auto;
+	width: 40%;
+	padding: 20px;
+	background-color: #ffffff82;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+    </style>
+</head>
+<body>
+	<header>
+		<!-- Add your bank logo here -->
+        <div class="f2">
+		<img src="d4.gif" alt="Bank logo">
+        </div>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About Us</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+                <li><a href="login2.html">Log out</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="home">
+			<h1>Welcome to Stark Bank</h1>
+			<p>We offer a wide range of financial services to meet your needs. Whether you're looking for a checking account, a savings account, a credit card, or a loan, we've got you covered.</p>
+			<a href="#services" class="cta">Learn More</a>
+		</section>
+
+		<section id="about">
+			<h2>About Us</h2>
+			<p>Our bank has been serving the community for over 50 years. We pride ourselves on providing exceptional customer service and offering competitive rates on all of our financial products. Our mission is to help you achieve your financial goals, whatever they may be.</p>
+			<a href="#services" class="cta">View Our Services</a>
+			<img src="d1.jpg" alt="Bank building">
+		</section>
+
+		<section id="services">
+			<h2>Our Services</h2>
+			<form>
+			<ul>
+				<li><a href="createacc.html">Create account</a></li>
+				<li><a href="withdrw.html">Withdraw Funds</a></li>
+				<li><a href="depo.html">Deposit Funds</a></li>
+				<li><a href="trans.html">Transfer Funds</a></li>
+				<li><a href="balance.html">Balance</a></li>
+				<li><a href="close.html">Close Account</a></li>
+				<li><a href="accstat.html">Account Statement</a></li>
+				<li><a href="overdraf.html">Overdraft Protection</a></li>
+				<li><a href="intrest.html">Interest Calculation</a></li>
+			</ul>
+			</form>
+			<a href="#contact" class="cta">Contact Us to Learn More</a>
+		</section>
+
+		<section id="contact">
+			<h2>Contact Us</h2>
+			<form action="#" method="POST">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" rows="5" required></textarea>
+				<button type="submit">Send</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Your Bank Name. All Rights Reserved.</p>
+	</footer>
+</body>
+</html>
